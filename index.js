@@ -1,6 +1,41 @@
+const chalk = require('chalk');
+const figlet = require('figlet');
 const inquirer = require('inquirer');
 
-inquirer.prompt([
+const start = () => {
+  console.log(
+    chalk.green(figlet.textSync('ProcessPy CLI', {
+      font: 'Bubble',
+      horizontalLayout: 'default',
+      verticalLayout: 'default'
+    })));
+}
+
+const run = async () => {
+  start();
+  
+  inquirer.prompt([
+    {
+      type: 'list',
+      name: 'color',
+      message: '¿What is your favorite color?',
+      choices: ['Red', 'Blue', 'Orange'],
+      filter: function(value){
+        return value;
+      }
+    }
+  ])
+  .then(answers => {
+    console.log('Answer: ', answers);
+  });
+}
+
+run();
+
+
+
+/*Test inquirer*/
+/*inquirer.prompt([
   {
     name: 'website',
     message: '¿What is your favorite website?',
@@ -40,12 +75,12 @@ inquirer.prompt([
     message: 'Please enter a password:',
     mask: '*'
   }
-  /*{
-    type: 'editor',
-    name: 'code',
-    message: 'Send your lines of code.'
-  }*/
+  //{
+    //type: 'editor',
+    //name: 'code',
+    //message: 'Send your lines of code.'
+  //}
 ])
 .then(answers => {
   console.log('Answer: ', answers);
-});
+});*/
