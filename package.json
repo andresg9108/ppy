@@ -1,0 +1,20 @@
+{
+  "name": "ppy",
+  "version": "0.1.0",
+  "description": "Processpy CLI",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andresg9108/ppy.git"
+  },
+  "author": "Andres Gonzalez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andresg9108/ppy/issues"
+  },
+  "homepage": "https://github.com/andresg9108/ppy#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
